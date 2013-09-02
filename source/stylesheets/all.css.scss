@@ -1,0 +1,55 @@
+$color: hsla(110, 100%, 100%, 0.9);
+$pass: hsla(1, 100%, 100%, 0);
+
+$header-color: hsla(179, 46%, 44%, 1);
+$projects-color: hsla(19, 100%, 60%, 1);
+$resume-color: hsla(40, 58%, 40%, 1);
+$info-color: hsla(254, 41%, 52%, 1);
+
+$body-bg: $info-color;
+$list-group-bg: $pass;
+$border-radius-base: 0px;
+$text-color: $color;
+$brand-primary: $color;
+$link-hover-color: opacify($brand-primary, 0.15);
+$font-family-sans-serif: 'Montserrat', sans-serif;
+
+@import "bootstrap";
+@import "./font-awesome";
+
+h1 {
+  text-transform: uppercase;
+}
+
+h3.main-links {
+  margin-top: 0px;
+  line-height: $headings-line-height * 1.25;
+}
+
+p.date {
+  color: transparentize($color, 0.15);
+}
+
+.row {
+  margin-bottom: 20px;
+}
+
+#header {
+  background-color: $header-color;
+}
+
+#projects {
+  background-color: $projects-color;
+}
+
+#resume {
+  background-color: $resume-color;
+}
+
+#info {
+  background-color: $info-color;
+}
+
+a {
+  text-decoration: underline;
+}
