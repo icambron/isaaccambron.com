@@ -1,4 +1,4 @@
-$color: hsla(110, 100%, 100%, 0.9);
+$color: hsla(110, 100%, 100%, 0.85);
 $pass: hsla(1, 100%, 100%, 0);
 
 $header-color: hsla(179, 46%, 44%, 1);
@@ -15,7 +15,7 @@ $link-hover-color: opacify($brand-primary, 0.15);
 $font-family-sans-serif: 'Montserrat', sans-serif;
 
 @import "bootstrap";
-@import "./font-awesome";
+@import "font-awesome";
 
 h1 {
   text-transform: uppercase;

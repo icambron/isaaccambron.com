@@ -51,6 +51,10 @@ set :js_dir, 'javascripts'
 
 set :images_dir, 'images'
 
+sprockets.append_path "vendor/javascripts"
+sprockets.append_path "vendor/stylesheets"
+
+
 # Build-specific configuration
 configure :build do
   # For example, change the Compass output style for deployment
