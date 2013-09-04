@@ -35,16 +35,42 @@
 
 #projects
   .container
-    %h2 Projects
+    = partial "projects"
 
 #resume
   .container
-    %h2 Resumé
+    = partial "resume"
 
 #info
   .container
     .row
+      .col-md-12
+        %noscript
+          %p You'd see Tweets and a Github feed here if you had JS enabled.
       .col-md-6
         #twitter
       .col-md-6
         #github
+
+#footer
+  .container
+    .row
+      %p
+        © 2013 Isaac Cambron. But you can see the code
+        %a{href: "http://github.com/icambron/icambron.github.io"} here.
+
+      %p.text-center
+        %em
+          "The time has come," the Walrus said,
+          %br
+          "To talk of many things:
+          %br
+          Of shoes--and ships--and sealing wax--
+          %br
+          Of cabbages--and kings--
+          %br
+          And why the sea is boiling hot--
+          %br
+          And whether pigs have wings."
+          %br
+        %span -Lewis Carrol

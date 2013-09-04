@@ -3,5 +3,6 @@
 #= require reactive-coffee
 #= require moment
 #= require twitter-text
+#= require timestack
 
 #= require loadExternal

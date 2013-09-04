@@ -6,16 +6,27 @@ $projects-color: hsla(19, 100%, 60%, 1);
 $resume-color: hsla(40, 58%, 40%, 1);
 $info-color: hsla(254, 41%, 52%, 1);
 
+$resume-offset-color: $header-color; // hsla(168, 58%, 40%, 1);
+
 $body-bg: $info-color;
 $list-group-bg: $pass;
 $border-radius-base: 0px;
 $text-color: $color;
-$brand-primary: $color;
-$link-hover-color: opacify($brand-primary, 0.15);
+$link-color: $color;
+$link-hover-color: opacify($link-color, 0.15);
 $font-family-sans-serif: 'Montserrat', sans-serif;
+
+$mit-color: #993333;
+$fmi-color: #7f0654;
+$ibm-color: #466BB0;
+$ninja-color: black;
+$streamcal-color: #41c1cc;
+$thomson-color: #ec7a19;
+$consulting-color: green;
 
 @import "bootstrap";
 @import "font-awesome";
+@import "timestack";
 
 h1 {
   text-transform: uppercase;
@@ -32,6 +43,7 @@ p.date {
 
 .row {
   margin-bottom: 20px;
+  margin-top: 4px;
 }
 
 #header {
@@ -50,6 +62,104 @@ p.date {
   background-color: $info-color;
 }
 
+#footer {
+  background-color: $header-color;
+}
+
 a {
   text-decoration: underline;
+}
+
+#timeline {
+  display: none;
+}
+
+.js-enabled {
+  #timeline {
+    display: block;
+  }
+
+  @media (max-width: $screen-md) {
+    #timeline {
+      display: none;
+    }
+  }
+}
+
+@mixin panel-resume($color) {
+  @include panel-variant(darken($color, 10%), white, $color, none);
+
+  .panel-body {
+    color: black;
+    a {
+      color: black;
+    }
+    a:hover {
+      color: black;
+    }
+  }
+}
+
+.panel-mit {
+  @include panel-resume($mit-color);
+}
+
+.panel-foster-miller {
+  @include panel-resume($fmi-color);
+}
+
+.panel-ibm {
+  @include panel-resume($ibm-color);
+}
+
+.panel-thomson {
+  @include panel-resume($thomson-color);
+}
+
+.panel-ninja {
+  @include panel-resume($ninja-color);
+}
+
+.panel-streamcal {
+  @include panel-resume($streamcal-color);
+}
+
+.panel-consulting {
+  @include panel-resume($consulting-color);
+}
+
+ul.timestack-events {
+  li.timeline-mit {
+    background-color: $mit-color;
+  }
+
+  li.timeline-foster-miller {
+    background-color: $fmi-color;
+  }
+
+  li.timeline-ibm {
+    background-color: $ibm-color;
+  }
+
+  li.timeline-thomson {
+    background-color: $thomson-color;
+  }
+
+  li.timeline-ninja {
+    background-color: $ninja-color;
+  }
+
+  li.timeline-streamcal {
+    background-color: $streamcal-color;
+  }
+
+  li.timeline-consulting {
+    background-color: $consulting-color;
+  }
+}
+
+@media (max-width: $screen-md) {
+  .corp-logo {
+    display: none;
+  }
 }

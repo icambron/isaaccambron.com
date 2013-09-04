@@ -38,12 +38,11 @@
 # Reload the browser automatically whenever files change
 activate :livereload
 
-# Methods defined in the helpers block are available in templates
-# helpers do
-#   def some_helper
-#     "Helping"
-#   end
-# end
+helpers do
+  def date_range(name, starts, ends, display= name)
+    "<p class='date-range' data-name='#{name}' data-display='#{display}'><span class='date-range-start'>#{starts}</span> - <span class='date-range-end'>#{ends}</span></p>"
+  end
+end
 
 set :css_dir, 'stylesheets'
 

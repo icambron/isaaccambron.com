@@ -73,6 +73,7 @@ window.loadExternal = ->
                 p [
                   " Pushed #{d.commits} #{if d.commits > 1 then 'commits' else 'commit'} to "
                   repo d.repo
+                  "."
                 ]
               when "PullRequestEvent"
                 p [
@@ -80,6 +81,7 @@ window.loadExternal = ->
                   a {href: d.url}, "##{d.number} - #{d.title}"
                   span " to "
                   repo d.repo
+                  "."
                 ]
               else ""
           ]
