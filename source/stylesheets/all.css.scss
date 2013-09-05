@@ -2,11 +2,9 @@ $color: hsla(110, 100%, 100%, 0.85);
 $pass: hsla(1, 100%, 100%, 0);
 
 $header-color: hsla(179, 46%, 44%, 1);
-$projects-color: hsla(19, 100%, 60%, 1);
+$projects-color: hsla(254, 41%, 52%, 1);
 $resume-color: hsla(40, 58%, 40%, 1);
-$info-color: hsla(254, 41%, 52%, 1);
-
-$resume-offset-color: $header-color; // hsla(168, 58%, 40%, 1);
+$info-color: hsla(90, 30%, 30%, 1);
 
 $body-bg: $info-color;
 $list-group-bg: $pass;
@@ -15,6 +13,8 @@ $text-color: $color;
 $link-color: $color;
 $link-hover-color: opacify($link-color, 0.15);
 $font-family-sans-serif: 'Montserrat', sans-serif;
+
+$twix-color: hsla(117, 36%, 29%, 1);
 
 $mit-color: #993333;
 $fmi-color: #7f0654;
@@ -46,6 +46,10 @@ p.date {
   margin-top: 4px;
 }
 
+a {
+  text-decoration: underline;
+}
+
 #header {
   background-color: $header-color;
 }
@@ -66,8 +70,62 @@ p.date {
   background-color: $header-color;
 }
 
-a {
-  text-decoration: underline;
+@mixin panel-box($color) {
+  @include panel-variant(darken($color, 10%), white, $color, none);
+
+  .panel-body {
+    color: black;
+    a {
+      color: black;
+    }
+    a:hover {
+      color: black;
+    }
+  }
+
+  button.btn.demo-button {
+    @include button-variant(white, $color, darken($color, 10%));
+    float: right;
+  }
+
+  @media (max-width: $screen-md) {
+    button.btn.demo-button {
+      display: none;
+    }
+  }
+
+}
+
+.panel-twix {
+  @include panel-box($twix-color);
+}
+
+.panel-mit {
+  @include panel-box($mit-color);
+}
+
+.panel-foster-miller {
+  @include panel-box($fmi-color);
+}
+
+.panel-ibm {
+  @include panel-box($ibm-color);
+}
+
+.panel-thomson {
+  @include panel-box($thomson-color);
+}
+
+.panel-ninja {
+  @include panel-box($ninja-color);
+}
+
+.panel-streamcal {
+  @include panel-box($streamcal-color);
+}
+
+.panel-consulting {
+  @include panel-box($consulting-color);
 }
 
 #timeline {
@@ -86,47 +144,6 @@ a {
   }
 }
 
-@mixin panel-resume($color) {
-  @include panel-variant(darken($color, 10%), white, $color, none);
-
-  .panel-body {
-    color: black;
-    a {
-      color: black;
-    }
-    a:hover {
-      color: black;
-    }
-  }
-}
-
-.panel-mit {
-  @include panel-resume($mit-color);
-}
-
-.panel-foster-miller {
-  @include panel-resume($fmi-color);
-}
-
-.panel-ibm {
-  @include panel-resume($ibm-color);
-}
-
-.panel-thomson {
-  @include panel-resume($thomson-color);
-}
-
-.panel-ninja {
-  @include panel-resume($ninja-color);
-}
-
-.panel-streamcal {
-  @include panel-resume($streamcal-color);
-}
-
-.panel-consulting {
-  @include panel-resume($consulting-color);
-}
 
 ul.timestack-events {
   li.timeline-mit {

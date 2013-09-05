@@ -42,6 +42,14 @@ helpers do
   def date_range(name, starts, ends, display= name)
     "<p class='date-range' data-name='#{name}' data-display='#{display}'><span class='date-range-start'>#{starts}</span> - <span class='date-range-end'>#{ends}</span></p>"
   end
+
+  def github_link(link)
+    "<i class='icon-github'></i> <a href='http://github.com/icambron/#{link}'>Github</a>"
+  end
+
+  def docs_link(link)
+    "<i class='icon-file'></i> <a href='http://icambron.github.io/#{link}'>Docs</a>"
+  end
 end
 
 set :css_dir, 'stylesheets'
