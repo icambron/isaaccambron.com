@@ -1,4 +1,9 @@
-#= require ./index
+#= require jquery
+#= require moment
+#= require twitter-text
+#= require timestack
+
+#= require loadExternal
 
 $ ->
 
