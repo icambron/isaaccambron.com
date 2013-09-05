@@ -14,14 +14,17 @@ do ($ = jQuery) ->
 
       $obj.append $ul
 
+  date = (item) ->
+    $('<p>')
+      .addClass('date')
+      .text(moment(item.created_at).fromNow())
+
   $.fn.extend
 
     loadTwitter: (tweets) ->
       createList.call @, tweets, (item) =>
         [
-          $('<p>')
-            .addClass('date')
-            .text(moment(item.created_at))
+          date item
           $('<p>').html("<span>#{twttr.txt.autoLink item.text}</span>")
         ]
 
@@ -56,4 +59,4 @@ do ($ = jQuery) ->
             ]
           else ''
 
-        $('<p>').append content
+        $('<p>').append [date(item)].concat(content)

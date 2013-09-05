@@ -7,36 +7,35 @@
 
 $ ->
 
-  $("body").addClass("js-enabled")
+  $('body').addClass('js-enabled')
 
   updateExternal = ->
-    $.getJSON "https://s3.amazonaws.com/isaac-as-a-service/isaac.json", (data) ->
-      console.log data
-      $("#twitter").loadTwitter(data.twitter)
-      $("#github").loadGithub(data.github)
-      setTimeout update, 60 * 1000
+    $.getJSON 'https://s3.amazonaws.com/isaac-as-a-service/isaac.json', (data) ->
+      $('#twitter').loadTwitter(data.twitter)
+      $('#github').loadGithub(data.github)
+      setTimeout updateExternal, 60 * 1000
 
   updateExternal()
 
   do ->
     dateParse = (d) ->
       text = d.text()
-      m = moment d.text(), "MMMM YYYY"
+      m = moment d.text(), 'MMMM YYYY'
       if m.isValid() then m else moment()
 
     ranges = []
-    $("p.date-range").each (i, p) ->
+    $('p.date-range').each (i, p) ->
       $p = $ p
-      name = $p.attr("data-name").toLowerCase()
+      name = $p.attr('data-name').toLowerCase()
       ranges.push
-        title: $p.attr "data-display"
-        start: dateParse $p.children(".date-range-start")
-        end: dateParse $p.children(".date-range-end")
+        title: $p.attr 'data-display'
+        start: dateParse $p.children('.date-range-start')
+        end: dateParse $p.children('.date-range-end')
         class: "timeline-#{name}"
         name: name
 
-    $("#timeline").timestack
+    $('#timeline').timestack
       span: 'year'
-      dateFormats: {year: "YYYY"}
+      dateFormats: {year: 'YYYY'}
       data: ranges
       click: (i) -> window.location.hash = "#{i.name}-job"
