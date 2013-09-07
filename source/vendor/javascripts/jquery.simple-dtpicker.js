@@ -91,6 +91,9 @@
  	};
 
  	var getDate = function (str) {
+    if (str.getMonth) {
+      return str;
+    }
  		var re = /^(\d{2,4})[-/](\d{1,2})[-/](\d{1,2}) (\d{1,2}):(\d{1,2})$/;
  		var m = re.exec(str);
  		if (m === null) {

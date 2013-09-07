@@ -10,12 +10,14 @@
       :markdown
         [Twix.js](http://icambron.github.io/twix.js/) is a [moment.js](http://momentjs.com) plugin for working with time ranges. Use it manipulate, interrogate, and format blocks of time. I built Twix as part of my former startup, [Streamcal](#streamcal-job), to create succinct, readable dates for event times. It grew from there to include a wide variety of utilities to answer questions like "do these time ranges overlap?" and "how many calendar days does this range cover?"
 
-      = docs_link "twix.js"
-      |
-      = github_link "twix.js"
-
     .col-md-2
-      %button.btn.demo-button Demo
+      %button.btn.demo-button{"data-demo" => "twix"} Demo
+
+  .panel-footer
+    = docs_link "twix.js"
+    |
+    = github_link "twix.js"
+
 
 %h3 Timestack
 
@@ -24,3 +26,12 @@
 %h3 Lazer
 
 %h3 Other projects
+
+#demo-modal.modal.fade
+  .modal-dialog
+    .modal-content
+      .modal-header
+        %button.close{"data-dismiss" => "modal", "aria-hidden" => "true"} &times;
+        %h2.demo-header
+      .modal-body
+        %p test

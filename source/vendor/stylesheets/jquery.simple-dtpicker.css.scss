@@ -152,7 +152,7 @@ $dt-scrollbar-color: #aaaaaa;
       padding-top: 5px;
       padding-bottom: 5px;
 
-      padding-right: 8px;
+      padding-right: 4px;
 
       overflow: auto;
       overflow-x: hidden;
@@ -179,7 +179,7 @@ $dt-scrollbar-color: #aaaaaa;
       div.timelist_item {
         @include user-select(none);
 
-        width: 4em;
+        width: auto;
 
         padding-top:   1px;
         padding-bottom:1px;

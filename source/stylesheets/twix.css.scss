@@ -1,2 +1,17 @@
-@import "demo";
+@import "variables";
+
+$link-color: $twix-color;
+$link-color-hover: lighten($twix-color, 10%);
+
+@import "bootstrap";
+@import "font-awesome";
+
 @import "jquery.simple-dtpicker";
+
+.container :first-child {
+  margin-top: 0px;
+}
+
+h1, h2, h3, h4 {
+ color: $twix-color;
+}

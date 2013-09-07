@@ -7,21 +7,41 @@
  
     %title= current_page.data.title || "Isaac Cambron"
     = javascript_include_tag "twix-demo"
-    = stylesheet_link_tag  "twix"
+    = stylesheet_link_tag "twix"
   %body
-    .container
-      %h2 Twix Demo
+    .container#demo-root
+      %h3 Configure demo
+      %p Pick start and end times and see the results of various Twix functions.
       .row
         .col-md-4
           %label Start
-          #start-picker
+          %div{"data-bind" => "dtPicker: range.start"}
         .col-md-4
           %label End
-          #end-picker
+          %div{"data-bind" => "dtPicker: range.end"}
+
+      .checkbox
+        %label
+          %input{type: "checkbox", "data-bind" => "checked: range.allDay"} All day
+
+      %p
+        %label From: 
+        %span{"data-bind" => "text: range.startFormatted"}
+
+      %p
+        %label To: 
+        %span{"data-bind" => "text: range.endFormatted"}
 
       .row
-        .col-md-8
-          .checkbox
-            %label
-              %input#all-day{type: "checkbox"} All day
-
+        .col-md-12{"data-bind" => "foreach: demos"}
+          %h3{"data-bind" => "text: name"}
+          %p{"data-bind" => "text: description"}
+          %table.table.table-striped
+            %thead
+              %th Code
+              %th Output
+            %tbody{"data-bind" => "foreach: tests"}
+              %tr
+                %td
+                  %code{"data-bind" => "text: code"}
+                %td{"data-bind" => "text: output"}

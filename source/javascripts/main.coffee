@@ -2,8 +2,10 @@
 #= require moment
 #= require twitter-text
 #= require timestack
+#= require bootstrap
 
 #= require loadExternal
+#= require showDemo
 
 $ ->
 
@@ -39,3 +41,5 @@ $ ->
       dateFormats: {year: 'YYYY'}
       data: ranges
       click: (i) -> window.location.hash = "#{i.name}-job"
+
+    $('.demo-button').loadDemo(modal: '#demo-modal')

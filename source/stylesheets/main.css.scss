@@ -8,12 +8,12 @@ $info-color: hsla(90, 30%, 30%, 1);
 
 $body-bg: $info-color;
 $list-group-bg: $pass;
+$font-family-sans-serif: 'Montserrat', sans-serif;
+
 $text-color: $color;
 $link-color: $color;
 $link-hover-color: opacify($link-color, 0.15);
-$font-family-sans-serif: 'Montserrat', sans-serif;
-
-$twix-color: hsla(117, 36%, 29%, 1);
+$close-color: $color;
 
 $mit-color: #993333;
 $fmi-color: #7f0654;
@@ -29,6 +29,10 @@ $consulting-color: green;
 @import "font-awesome";
 @import "timestack";
 
+p.date {
+  color: transparentize($color, 0.15);
+}
+
 h1 {
   text-transform: uppercase;
 }
@@ -36,10 +40,6 @@ h1 {
 h3.main-links {
   margin-top: 0px;
   line-height: $headings-line-height * 1.25;
-}
-
-p.date {
-  color: transparentize($color, 0.15);
 }
 
 .row {
@@ -74,7 +74,7 @@ a {
 @mixin panel-box($color) {
   @include panel-variant(darken($color, 10%), white, $color, none);
 
-  .panel-body {
+  .panel-body, .panel-footer {
     color: black;
     a {
       color: black;
@@ -137,12 +137,6 @@ a {
   #timeline {
     display: block;
   }
-
-  @media (max-width: $screen-md) {
-    #timeline {
-      display: none;
-    }
-  }
 }
 
 
@@ -180,4 +174,54 @@ ul.timestack-events {
   .corp-logo {
     display: none;
   }
+}
+
+.demo-header {
+  text-transform: capitalize;
+}
+
+@mixin large-modal {
+
+  .modal-dialog {
+
+    top: 5%;
+    left: 5%;
+    right: 5%;
+    width: 90%;
+    height: 100%;
+
+    .modal-content {
+      position: absolute;
+      max-height: none;
+      height: 90%;
+      width: 100%;
+    }
+
+    .modal-body {
+      position: relative;
+      height: 90%;
+      width: 100%;
+      max-height: none;
+    }
+
+    .modal-footer {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+    }
+  }
+}
+
+#demo-modal {
+  @include large-modal;
+}
+
+iframe {
+  position: relative;
+  height: 100%;
+}
+
+.twix-demo-header {
+  background-color: $twix-color;
 }
