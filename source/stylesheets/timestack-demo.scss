@@ -1,0 +1,36 @@
+@import "variables";
+@import "bootstrap";
+@import "timestack";
+
+.container :first-child {
+  margin-top: 0px;
+}
+
+.capitalize {
+  text-transform: capitalize;
+}
+
+ul.timestack-events {
+  color: white;
+}
+
+
+ul.timestack-events {
+  background-color: #ddd;
+  li.demo-default {
+    background-color: $timestack-color;
+  }
+}
+
+h3, h4 {
+  color: $timestack-color;
+}
+
+.btn-timestack {
+  @include button-variant(white, $timestack-color, $timestack-color)
+}
+
+.form-section {
+  border: 1px solid #ddd;
+  padding: 10px;
+}

@@ -9,6 +9,11 @@ ul.timestack-events {
   width: 100%;
 }
 
+ul.timestack-events * {
+  margin: 0px;
+}
+
+
 ul.timestack-events li {
   box-sizing: border-box;
   -moz-box-sizing: border-box;

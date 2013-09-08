@@ -42,4 +42,4 @@ $ ->
       data: ranges
       click: (i) -> window.location.hash = "#{i.name}-job"
 
-    $('.demo-button').loadDemo(modal: '#demo-modal')
+    $('.demo-button').showDemo(modal: '#demo-modal')

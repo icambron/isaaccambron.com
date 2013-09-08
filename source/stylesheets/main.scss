@@ -8,7 +8,6 @@ $info-color: hsla(90, 30%, 30%, 1);
 
 $body-bg: $info-color;
 $list-group-bg: $pass;
-$font-family-sans-serif: 'Montserrat', sans-serif;
 
 $text-color: $color;
 $link-color: $color;
@@ -101,6 +100,14 @@ a {
   @include panel-box($twix-color);
 }
 
+.panel-timestack {
+  @include panel-box($timestack-color);
+}
+
+.panel-resume-overview {
+  @include panel-box(darkblue);
+}
+
 .panel-mit {
   @include panel-box($mit-color);
 }
@@ -129,16 +136,15 @@ a {
   @include panel-box($consulting-color);
 }
 
-#timeline {
+#timeline-section {
   display: none;
 }
 
 .js-enabled {
-  #timeline {
+  #timeline-section {
     display: block;
   }
 }
-
 
 ul.timestack-events {
   li.timeline-mit {
@@ -224,4 +230,8 @@ iframe {
 
 .twix-demo-header {
   background-color: $twix-color;
+}
+
+.timestack-demo-header {
+  background-color: $timestack-color;
 }

@@ -1,7 +1,7 @@
 do ($ = jQuery) ->
 
   createList = (items, xform) ->
-    @each =>
+    @each ->
       $obj = $ @
       $obj.empty()
 
