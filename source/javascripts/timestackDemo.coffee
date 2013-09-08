@@ -17,18 +17,17 @@ class ViewModel
   add: ->
     unless @newPeriod().error()
       @existingPeriods.push @newPeriod()
-      @newPeriod new Period(@span())
+      @newPeriod Period.default(span)
 
   reset: ->
     span = @span()
-    @newPeriod new Period span
+    @newPeriod Period.default(span)
     @existingPeriods.removeAll()
-    @existingPeriods.push Period.default(span)
-    console.log @existingPeriods()[0].start.value().format()
+    @existingPeriods.push Period.example(span)
 
 
 class Period
-  @default = (span) ->
+  @example = (span) ->
     m = moment()
     [start, end] = switch span
       when 'year'
@@ -45,11 +44,24 @@ class Period
     p.title('Demo!')
     p
 
+  @default = (span) ->
+    m = moment()
+    [start, end] = switch span
+      when 'year'
+        [[m.year(), 9], [m.year() + 2, 5]]
+      when 'month'
+        [[m.year(), 5, 26], [m.year(), 11, 3]]
+      when 'day'
+        [[m.year(), m.month(), 16, 23], [m.year(), m.month(), 24, 12]]
+      when 'hour'
+        [[m.year(), m.month(), m.date(), 12, 30], [m.year(), m.month(), m.date(), 20, 0]]
+    new Period span, moment(start), moment(end)
+
   constructor: (@span, start = moment(), end = moment()) ->
     @colors = ['red', 'blue', 'green', 'orange', 'purple']
 
-    @start = new Time @span, false, start
-    @end = new Time @span, true, end
+    @start = new Time @span, start
+    @end = new Time @span, end
     @color = ko.observable @colors[0]
     @title = ko.observable 'Things!'
     @clazz = ko.observable()
@@ -63,8 +75,7 @@ class Period
         "Duration: #{@start.value().from(@end.value(), @span, true)}"
 
 class Time
-  constructor: (@span, delta, t = moment().startOf('day')) ->
-    t.year(t.year() + 1) if delta && @span == 'year'
+  constructor: (@span, t) ->
 
     @year = ko.observable t.years()
     @month = ko.observable t.months()
