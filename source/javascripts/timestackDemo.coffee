@@ -17,7 +17,7 @@ class ViewModel
   add: ->
     unless @newPeriod().error()
       @existingPeriods.push @newPeriod()
-      @newPeriod Period.default(span)
+      @newPeriod Period.default(@span())
 
   reset: ->
     span = @span()
@@ -57,7 +57,7 @@ class Period
         [[m.year(), m.month(), m.date(), 12, 30], [m.year(), m.month(), m.date(), 20, 0]]
     new Period span, moment(start), moment(end)
 
-  constructor: (@span, start = moment(), end = moment()) ->
+  constructor: (@span, start, end) ->
     @colors = ['red', 'blue', 'green', 'orange', 'purple']
 
     @start = new Time @span, start
