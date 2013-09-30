@@ -104,6 +104,14 @@ a {
   @include panel-box($timestack-color);
 }
 
+.panel-fbfriends {
+  @include panel-box($fbfriends-color);
+}
+
+.panel-lazer {
+  @include panel-box($lazer-color);
+}
+
 .panel-resume-overview {
   @include panel-box(darkblue);
 }
@@ -234,4 +242,8 @@ iframe {
 
 .timestack-demo-header {
   background-color: $timestack-color;
+}
+
+.fbfriends-demo-header {
+  background-color: $fbfriends-color;
 }

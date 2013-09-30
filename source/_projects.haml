@@ -1,4 +1,4 @@
-%h1 Projects
+%h1 OSS Projects
 
 %p Here are some of the open-source projects I've built.
 
@@ -14,9 +14,9 @@
       %button.btn.demo-button{"data-demo" => "twix"} Demo
 
   .panel-footer
-    = docs_link "twix.js"
-    |
     = github_link "twix.js"
+    |
+    = docs_link "twix.js"
 
 .panel.panel-timestack
   .panel-heading
@@ -30,13 +30,41 @@
       %button.btn.demo-button{"data-demo" => "timestack"} Demo
 
   .panel-footer
-    = docs_link "timestack"
-    |
     = github_link "timestack"
+    |
+    = docs_link "timestack"
 
-%h3 FBFriends
+.panel.panel-fbfriends
+  .panel-heading
+    .panel-title FBFriends
+  .panel-body
+    .col-md-10
+      :markdown
+        FBFriends is a dialog for selecting people from the user's list of Facebook friends. It's a small piece of Javascript and CSS that can be used inside of any modal/dialog tool.
 
-%h3 Lazer
+        I create FBFriends as part of the website I built for my wedding.
+
+    .col-md-2
+      %button.btn.demo-button{"data-demo" => "fbfriends"} Demo
+
+  .panel-footer
+    = github_link "fbfriends"
+    |
+    = docs_link "fbfriends"
+
+.panel.panel-lazer
+  .panel-heading
+    .panel-title Lazer
+  .panel-body
+    .col-md-10
+      :markdown
+        Some lazer text
+
+    .col-md-2
+      %button.btn.demo-button{"data-demo" => "lazer"} Demo
+
+  .panel-footer
+    = github_link "lazer"
 
 %h3 Other projects
 
