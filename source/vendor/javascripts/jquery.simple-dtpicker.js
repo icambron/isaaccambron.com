@@ -321,7 +321,7 @@
 				http://fortawesome.github.io/Font-Awesome/license/
 				Thankyou.
 			*/
-			$link_today.addClass('icon-home');
+			$link_today.addClass('fa').addClass('fa-home');
 			$link_today.prop('alt', 'Today');
 			$link_today.prop('title', 'Today');
 			$link_today.click(function() {

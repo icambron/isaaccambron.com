@@ -33,11 +33,11 @@ helpers do
   end
 
   def github_link(link)
-    "<i class='icon-github'></i> <a href='http://github.com/icambron/#{link}'>Github</a>"
+    "<i class='fa fa-github'></i> <a href='http://github.com/icambron/#{link}'>Github</a>"
   end
 
   def docs_link(link)
-    "<i class='icon-file'></i> <a href='http://icambron.github.io/#{link}'>Docs</a>"
+    "<i class='fa fa-file'></i> <a href='http://icambron.github.io/#{link}'>Docs</a>"
   end
 end
 

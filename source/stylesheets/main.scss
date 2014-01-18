@@ -56,12 +56,6 @@ p a {
   text-decoration: underline;
 }
 
-.info-link {
-  float: right;
-  font-size: 12pt;
-  font-weight: normal
-}
-
 @mixin panel-box($color) {
   @include panel-variant(darken($color, 10%), white, $color, none);
 
