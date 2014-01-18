@@ -1,70 +1,31 @@
-#header
-  .container
-    .row
-      .col-md-12
-        %h1 Isaac Cambron
+.container
+  .row
+    .col-lg-3
+      %img.img-circle{src: "/images/headshot.jpg"}
 
-    .row
+    .col-lg-5
+      %h1 Isaac Cambron
+      %p.lead I build stuff. Mostly for the web.
+      %p I live in Cambridge, MA. I'm usually up for a drink and a chat. I don't want a job at your company, though I'm occasionally available for short-term contract work.
+      %p This site is mostly about my programming work.
 
-      .col-md-3
-        %img{src: "/images/headshot.jpg"}
-
-      .col-md-5
-        %p.lead I build stuff. Mostly for the web.
-        %p I live in Cambridge, MA. I'm usually up for a drink and a chat. I don't want a job at your company, though I'm occasionally available for short-term contract work.
-        %p This page is mostly about my programming work.
-
-      .col-md-4
-        %h3.main-links
-          %ul.list-unstyled
-            %li
-              %a{href: "#projects"} OSS Projects
-            %li
-              %a{href: "#resume"} Resumé
-            %li
-              %a{href: "/blog"} Blog
+    .col-lg-4
+      %h3.main-links
         %ul.list-unstyled
           %li
-            %i.icon-envelope
-            %a{href: "mailto:isaac@isaaccambron.com"} isaac@isaaccambron.com
+            %a{href: "/projects.html"} OSS Projects
           %li
-            %i.icon-twitter
-            %a{href: "http://twitter.com/icambron"} @icambron
+            %a{href: "/resume.html"} Resumé
           %li
-            %i.icon-github
-            %a{href: "http://github.com/icambron"} github.com/icambron
-
-#projects
-  .container
-    = partial "projects"
-
-#resume
-  .container
-    = partial "resume"
-
-#info
-  .container
-    = partial "info"
-
-#footer
-  .container
-    .row
-      %p
-        © 2013 Isaac Cambron. But you can see the code
-        %a{href: "http://github.com/icambron/icambron.github.io"} here.
-
-      %p.text-center
-        %em
-          "The time has come," the Walrus said,
-          %br
-          "To talk of many things:
-          %br
-          Of shoes--and ships--and sealing wax--
-          %br
-          Of cabbages--and kings--
-          %br
-          And why the sea is boiling hot--
-          %br
-          And whether pigs have wings."
-          %br
-        %span -Lewis Carrol
+            %a{href: "/blog.html"} Blog
+      %ul.list-unstyled
+        %li
+          %i.icon-envelope
+          %a{href: "mailto:isaac@isaaccambron.com"} isaac@isaaccambron.com
+        %li
+          %i.icon-twitter
+          %a{href: "http://twitter.com/icambron"} @icambron
+        %li
+          %i.icon-github
+          %a{href: "http://github.com/icambron"} github.com/icambron
+  = partial "info"

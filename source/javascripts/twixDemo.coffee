@@ -1,3 +1,5 @@
+# vi: ft=coffee
+
 #= require jquery
 #= require moment
 #= require twix
@@ -25,6 +27,9 @@ class TwixWrap
     @endFormatted = ko.computed =>
       moment(@end()).format("YYYY-MM-DD HH:mm")
 
+    @maker = ko.computed =>
+      "var twix = moment('#{@startFormatted()}', '#{@endFormatted()}');"
+
 class ViewModel
 
   constructor: ->
@@ -38,7 +43,7 @@ class ViewModel
 
       tests = [
         {
-          name: 'Basic Information'
+          name: 'Basic information'
           description: 'Simple information.'
           tests: [
             'twix.isValid()'

@@ -1,0 +1,90 @@
+.container
+
+  %h1 OSS Projects
+
+  %p
+    :markdown
+      Here are some of the open-source projects I've built or contributed to. You can find a longer list on my [Github page](http://github.com/icambron?tab=repositories).
+
+  .panel.panel-moment
+    .panel-heading
+      .panel-title Moment.js
+    .panel-body
+      .col-md-10
+        :markdown
+          [Moment.js](http://momentjs.com) is a popular date/time library for Javascript, with facilities for parsing, validating, manipulating, and formatting dates in a variety of human languages. It allows developers to work much more easily with dates and times across different browsers and platforms. I joined the project in 2013 and have a made a number of contributions.
+      .col-md-2
+        %button.btn.demo-button{"data-demo" => "moment"} Demo
+
+    .panel-footer
+      %i.icon-github
+      %a{href: 'http://github.com/moment/moment'} Github
+      |
+      %a{href: 'http://momentjs.com/'} Docs
+
+  .panel.panel-twix
+    .panel-heading
+      .panel-title Twix.js
+    .panel-body
+      .col-md-10
+        :markdown
+          [Twix.js](http://icambron.github.io/twix.js/) is a [moment.js](http://momentjs.com) plugin for working with time ranges. Use it manipulate, interrogate, and format blocks of time. I built Twix as part of my former startup, [Streamcal](/resume.html#streamcal-job), to create succinct, readable dates for event times. It grew from there to include a wide variety of utilities to answer questions like "do these time ranges overlap?" and "how many calendar days does this range cover?"
+
+      .col-md-2
+        %button.btn.demo-button{"data-demo" => "twix"} Demo
+
+    .panel-footer
+      = github_link "twix.js"
+      |
+      = docs_link "twix.js"
+
+  .panel.panel-timestack
+    .panel-heading
+      .panel-title Timestack
+    .panel-body
+      .col-md-10
+        :markdown
+          Timestack is a tool for making pretty timelines on the web. It's built in CoffeeScript and Less, and designed to be easy-to-use for web developers. If you have a big enough screen, you can see it in action in my [resume](/resume.html).
+
+      .col-md-2
+        %button.btn.demo-button{"data-demo" => "timestack"} Demo
+
+    .panel-footer
+      = github_link "timestack"
+      |
+      = docs_link "timestack"
+
+  .panel.panel-fbfriends
+    .panel-heading
+      .panel-title FBFriends
+    .panel-body
+      .col-md-10
+        :markdown
+          FBFriends is a dialog for selecting people from the user's list of Facebook friends. It's a small piece of Javascript and CSS that can be used inside of any modal/dialog tool.
+
+          I create FBFriends as part of the website I built for my wedding.
+
+    .panel-footer
+      = github_link "fbfriends"
+      |
+      = docs_link "fbfriends"
+
+  .panel.panel-lazer
+    .panel-heading
+      .panel-title Lazer
+    .panel-body
+      .col-md-10
+        :markdown
+          Lazer is a Ruby library for working with sequences through lazy evaluation. Used carefully, it can result in large performance increases for list operations, and the ability to do useful things with infinite sequences.
+
+    .panel-footer
+      = github_link "lazer"
+
+  #demo-modal.modal.fade
+    .modal-dialog
+      .modal-content
+        .modal-header
+          %button.close{"data-dismiss" => "modal", "aria-hidden" => "true"} &times;
+          %h2.demo-header
+        .modal-body
+          %p test

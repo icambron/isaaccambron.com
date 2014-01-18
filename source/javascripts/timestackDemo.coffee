@@ -1,3 +1,5 @@
+# vi: ft=coffee
+
 #= require jquery
 #= require moment
 #= require timestack
@@ -31,7 +33,9 @@ class Period
     m = moment()
     [start, end] = switch span
       when 'year'
-        [[m.year() - 1, 7], [m.year() + 1, 2]]
+        a  = [[m.year() - 1, 7], [m.year() + 1, 2]]
+        console.log a
+        a
       when 'month'
         [[m.year(), 2, 3], [m.year(), 6, 14]]
       when 'day'
@@ -85,7 +89,7 @@ class Time
 
     simpleValues = (arr) -> {value: v, display: v} for v in arr
 
-    @years = simpleValues [2005..2015]
+    @years = simpleValues [2005..2019]
     @months = ({value: m, display: moment().month(m).format('MMM')} for m in [0..11])
     @days = ko.computed =>
       days = moment([@year(), @month()]).daysInMonth()

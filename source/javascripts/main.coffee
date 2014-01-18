@@ -11,13 +11,14 @@ $ ->
 
   $('body').addClass('js-enabled')
 
-  updateExternal = ->
-    $.getJSON 'https://s3.amazonaws.com/isaac-as-a-service/isaac.json', (data) ->
-      $('#twitter').loadTwitter(data.twitter)
-      $('#github').loadGithub(data.github)
-      setTimeout updateExternal, 60 * 1000
+  if $("#twitter").length > 0
+    updateExternal = ->
+      $.getJSON 'https://s3.amazonaws.com/isaac-as-a-service/isaac.json', (data) ->
+        $('#twitter').loadTwitter(data.twitter)
+        $('#github').loadGithub(data.github)
+        setTimeout updateExternal, 60 * 1000
 
-  updateExternal()
+    updateExternal()
 
   do ->
     dateParse = (d) ->

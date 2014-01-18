@@ -5,7 +5,7 @@
     / Always force latest IE rendering engine or request Chrome Frame
     %meta{content: "IE=edge,chrome=1", "http-equiv" => "X-UA-Compatible"}/
  
-    %title= current_page.data.title || "Isaac Cambron"
+    %title Twix Demo
     = javascript_include_tag "twixDemo"
     = stylesheet_link_tag "twix-demo"
   %body
@@ -24,13 +24,11 @@
         %label
           %input{type: "checkbox", "data-bind" => "checked: range.allDay"} All day
 
-      %p
-        %label From: 
-        %span{"data-bind" => "text: range.startFormatted"}
-
-      %p
-        %label To: 
-        %span{"data-bind" => "text: range.endFormatted"}
+      .row
+        .col-md-12
+          %h3 Create
+          %p
+            %code{"data-bind" => "text: range.maker()"}
 
       .row
         .col-md-12{"data-bind" => "foreach: demos"}
