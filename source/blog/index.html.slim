@@ -1,17 +1,13 @@
 ---
 pageable: true
-per_page: 10
+per_page: 5
 ---
 
 #blog
-  #blog-paging
-    -if paginate && num_pages > 0
-      p= "Page #{page_number} of #{num_pages}"
 
-      -if prev_page
-        p= link_to "Previous page", prev_page
   #blog-info
     #blog-info-content
+
       h4 Isaac Cambron
       p
         a href="http://twitter.com/icambron" @icambron
@@ -19,7 +15,10 @@ per_page: 10
         i.fa.fa-rss>
         a href="/blog/feed.xml" Feed
 
+
   #blog-articles
+    -if prev_page
+      p= link_to "Previous page", prev_page
     - page_articles.each_with_index do |article, i|
       .blog-article
         .blog-content
@@ -27,6 +26,6 @@ per_page: 10
           p.blog-date= article.date.strftime('%b %e, %Y')
           = article.body
 
-  -if paginate
-    -if next_page
-      p= link_to "Next page", next_page
+    -if paginate
+      -if next_page
+        p= link_to "Next page", next_page

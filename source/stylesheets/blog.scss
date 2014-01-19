@@ -1,11 +1,12 @@
+
 #blog {
   @extend .row;
 
   #blog-info {
     @extend .col-lg-2;
+    @extend .visible-lg;
 
     #blog-info-content {
-      @extend .visible-large;
 
       margin-top: 100px;
 

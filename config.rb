@@ -3,10 +3,24 @@ activate :livereload
 activate :blog do |blog|
   blog.prefix = "blog"
   blog.layout = "blog/layout"
+  blog.paginate = true
+  @tab = "blog"
 end
 
 page '/demos/*', layout: false
 page "/blog/feed.xml", layout: false
+
+page "/" do
+  @tab = "about"
+end
+
+page "/resume*" do
+  @tab = "resume"
+end
+
+page "/projects*" do
+  @tab = "projects"
+end
 
 helpers do
   def date_range(name, starts, ends, display= name)

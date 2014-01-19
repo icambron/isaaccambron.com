@@ -16,11 +16,13 @@ html
         a.navbar-brand href= "/" Isaac
       .collapse.navbar-collapse
         ul.nav.navbar-nav
-          li
+          li class="#{@tab == 'about' ? 'active' : ''}" 
+            a href='/' About
+          li  class="#{@tab == 'projects' ? 'active' : ''}"
             a href='/projects.html' OSS Projects
-          li
+          li class="#{@tab == 'resume' ? 'active' : ''}"
             a href='/resume.html' Resume
-          li
+          li class="#{@tab == 'blog' ? 'active' : ''}"
             a href='/blog' Blog
     .container
       = yield
