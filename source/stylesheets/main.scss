@@ -76,7 +76,7 @@ p a {
     float: right;
   }
 
-  @media (max-width: $screen-md) {
+  @media (max-width: $screen-sm-max) {
     button.btn.demo-button {
       display: none;
     }
@@ -177,7 +177,7 @@ ul.timestack-events {
   }
 }
 
-@media (max-width: $screen-md) {
+@media (max-width: $screen-sm-max) {
   .corp-logo {
     display: none;
   }
