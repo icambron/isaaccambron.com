@@ -1,6 +1,12 @@
 source 'https://rubygems.org'
 
-gem "middleman", "~>3.1.4"
-gem "middleman-livereload", "~> 3.1.0"
+gem "middleman"
+gem "middleman-livereload"
+gem "middleman-blog"
+gem "middleman-syntax"
+
+gem "redcarpet"
+
+gem "builder"
 
 gem "bootstrap-sass", require: false, git: 'git://github.com/thomas-mcdonald/bootstrap-sass.git', branch: '3'

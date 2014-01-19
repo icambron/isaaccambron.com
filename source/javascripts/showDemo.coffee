@@ -11,6 +11,7 @@ do ($ = jQuery) ->
         $obj.click ->
 
           $frame = $('<iframe>')
+            .addClass("demo-frame")
             .attr('src', "demos/#{demo}.html")
             .attr('frameborder', '0')
             .attr('width', '100%')

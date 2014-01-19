@@ -27,6 +27,9 @@ $consulting-color: green;
 @import "font-awesome";
 @import "timestack";
 
+@import "syntax";
+@import "blog";
+
 body {
   background-color: white;
 }
@@ -226,7 +229,7 @@ ul.timestack-events {
   @include large-modal;
 }
 
-iframe {
+iframe.demo-frame {
   position: relative;
   height: 100%;
 }
