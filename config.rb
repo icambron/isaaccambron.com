@@ -2,7 +2,7 @@ activate :livereload
 
 activate :blog do |blog|
   blog.prefix = "blog"
-  blog.layout = "blog/layout"
+  blog.layout = "blog"
   blog.paginate = true
   @tab = "blog"
 end
@@ -49,5 +49,5 @@ sprockets.append_path "vendor/stylesheets"
 
 configure :build do
   activate :minify_css
-  activate :minify_javascript
+  set :js_compressor, Uglifier.new(compress: {loops: false})
 end

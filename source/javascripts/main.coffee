@@ -1,5 +1,5 @@
-#= require jquery
-#= require moment
+#= require jquery.min
+#= require moment.min
 #= require twitter-text
 #= require timestack
 #= require bootstrap

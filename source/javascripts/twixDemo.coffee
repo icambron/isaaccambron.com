@@ -1,7 +1,7 @@
 # vi: ft=coffee
 
-#= require jquery
-#= require moment
+#= require jquery.min
+#= require moment.min
 #= require twix
 #= require knockout
 #= require jquery.simple-dtpicker

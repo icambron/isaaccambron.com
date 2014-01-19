@@ -130,3 +130,4 @@ DEPENDENCIES
   middleman-syntax
   redcarpet
   slim
+  uglifier

@@ -13,10 +13,10 @@
       %h3 Configure demo
       %p Pick start and end times and see the results of various Twix functions.
       .row
-        .col-md-4
+        .col-lg-4
           %label Start
           %div{"data-bind" => "dtPicker: range.start"}
-        .col-md-4
+        .col-lg-4
           %label End
           %div{"data-bind" => "dtPicker: range.end"}
 
@@ -25,13 +25,13 @@
           %input{type: "checkbox", "data-bind" => "checked: range.allDay"} All day
 
       .row
-        .col-md-12
+        .col-lg-12
           %h3 Create
           %p
             %code{"data-bind" => "text: range.maker()"}
 
       .row
-        .col-md-12{"data-bind" => "foreach: demos"}
+        .col-lg-12{"data-bind" => "foreach: demos"}
           %h3{"data-bind" => "text: name"}
           %p{"data-bind" => "text: description"}
           %table.table.table-striped

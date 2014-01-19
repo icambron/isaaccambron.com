@@ -1,7 +1,7 @@
 # vi: ft=coffee
 
-#= require jquery
-#= require moment
+#= require jquery.min
+#= require moment.min
 #= require timestack
 #= require knockout
 

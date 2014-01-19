@@ -1,6 +1,7 @@
 source 'https://rubygems.org'
 
 gem "slim"
+gem "uglifier"
 
 gem "middleman"
 gem "middleman-livereload"
