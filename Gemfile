@@ -8,6 +8,7 @@ gem "middleman-livereload"
 gem "middleman-blog"
 gem "middleman-syntax"
 gem "middleman-slim"
+gem 'middleman-gh-pages'
 
 gem "redcarpet"
 
