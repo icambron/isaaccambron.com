@@ -16,11 +16,11 @@ Maps are really important. Don't think of them as hashtables, which is an algori
 ```js
 var beer = {
   brand: "Alltech",
-  name: "Kentucky Bourbon Barrel Ale"},
+  name: "Kentucky Bourbon Barrel Ale",
   profile: {
     carbonation: "light",
     mouthFeel: "smooth",
-    
+
   }
 }
 ```

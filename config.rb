@@ -14,11 +14,11 @@ helpers do
   end
 
   def github_link(link)
-    "<i class='fa fa-github'></i> <a href='http://github.com/icambron/#{link}'>Github</a>"
+    "<i class='fa fa-github'></i> <a href='http://github.com/icambron/#{link}'>Github</a>&nbsp;"
   end
 
   def docs_link(link)
-    "<i class='fa fa-file'></i> <a href='http://icambron.github.io/#{link}'>Docs</a>"
+    "&nbsp;<i class='fa fa-file'></i> <a href='http://icambron.github.io/#{link}'>Docs</a>"
   end
 end
 

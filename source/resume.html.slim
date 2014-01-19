@@ -1,9 +1,9 @@
-%h1 Isaac Cambron's Resumé
+h1 Isaac Cambron's Resumé
 
-%h3 Overview
+h3 Overview
 .panel.panel-resume-overview
   .panel-body
-    :markdown
+    markdown:
       **Position**: I've been the only coder on a project, working late into the night fueled by caffeine, and I've been the architect for a team, orchestrating development cycles and drawing pretty system design box diagrams. And a few things in between.
 
       **Scope**: I'm a full stack software engineer: I work on everything from database schemas, to application middleware, to business logic, to user experience, to UI implementation. Though as you can see from this page, I'm not the world's best graphic designer.
@@ -13,17 +13,17 @@
       **OSS**: I'm a commiter for and frequent contributor to [Moment.js](http://momentjs.com), a popular date/time library for Javascript. I also maintain several of my own OSS libraries (see the [OSS Projects](/projects.html) page), and have made minor contributions to a slew of other projects. You can see it all [at Github](http://github.com/icambron).
 
 #timeline-section.hidden-small.hidden-xs
-  %h3 Timeline
+  h3 Timeline
   #timeline
 
-%h3 Work Experience
+h3 Work Experience
 
 .panel.panel-consulting#consulting-job
   .panel-heading
     .panel-title Consulting
   .panel-body
     = date_range("Consulting", "April 2009", "Present")
-    :markdown
+    markdown:
       I've done a variety of contract projects since 2009, from architectural consultation to full-time development work. My customers included [Thomson Reuters](http://thomsonreuters.com/), [Connected Sports](http://www.connectedsports.com/), [LiquidityBook](http://www.liquiditybook.com/), and [Invite Education](http://inviteeducation.com).
 
 .panel.panel-streamcal#streamcal-job
@@ -32,14 +32,14 @@
   .panel-body.row
     .col-md-9
       = date_range("Streamcal", "September 2011", "October 2012")
-      :markdown
+      markdown:
 
         We built a novel stream-oriented system for publishing and subscribing to calendar events. The product allowed you to subscribe to various calendars (like bands, bars, Meetups, etc) and see them in a Twitter-style feed. Users could then add them to their calendars with one click, or republish them to their followers. The product worked really well, but we were never able to get the business model sorted out, and eventually we were forced to set it aside.
 
         I did all the architecture and coding as well as a good portion of the product design. The technology stack was Rails, Faye, MongoDB, and Knockout.js.
 
     .col-md-3.corp-logo
-      %img{src: "images/logos/streamcal.png"}
+      img src="images/logos/streamcal.png" 
 
 .panel.panel-ninja#ninja-job
   .panel-heading
@@ -47,13 +47,13 @@
   .panel-body.row
     .col-md-9
       = date_range("ninja", "April 2010", "July 2011", "Ninja Sports")
-      :markdown
+      markdown:
         I was a founding member of a team aiming to make sports information more visual and engaging. We wrote some cool software, ran some experiments, talked to users, designed some products, and had a lot of fun. Ultimately, we shelved it before it really became a company.
 
         Techwise, it was built with Rails, MongoDB, Erector, and JQuery.
 
     .col-md-3.corp-logo
-      %img{src: "images/logos/ninja.png"}
+      img src="images/logos/ninja.png" 
 
 .panel.panel-thomson#thomson-job
   .panel-heading
@@ -61,13 +61,13 @@
   .panel-body.row
     .col-md-9
       = date_range("thomson", "December 2005", "April 2010", "Contact Networks/TR")
-      :markdown
+      markdown:
         I was an early employee of a startup called Contact Networks and the architect for its flagship product, ContactNet, an enterprise who-knows-who application. I handled architecture, a big chunk of development, customer issues, planning, and beer consumption. The software itself was built in C# using a wide variety of open source libraries.
 
         Our startup was acquired by Thomson Reuters in 2007, and I continued my role as architect while we grew our team and product.
 
     .col-md-3.corp-logo
-      %img{src: "images/logos/thomson.png"}
+      img src="images/logos/thomson.png"
 
 .panel.panel-ibm#ibm-job
   .panel-heading
@@ -75,11 +75,11 @@
   .panel-body.row
     .col-md-9
       = date_range("IBM", "June 2004", "December 2005")
-      :markdown
+      markdown:
         I worked on several development projects: Quickr, Notes/Domino, and Workplace. I built collaboration software in C++, Java, and Javascript, including rapid prototyping and rearchitecture work.
 
     .col-md-3.corp-logo
-      %img{src: "images/logos/ibm.png"}
+      img src="images/logos/ibm.png"
 
 .panel.panel-foster-miller#foster-miller-job
   .panel-heading
@@ -87,14 +87,13 @@
   .panel-body.row
     .col-md-9
       = date_range("Foster-Miller", "June 2002", "June 2004")
-      :markdown
-
+      markdown:
         I built badass robots for the Navy. Foster-Miller is now part of [QinetiQ](http://www.qinetiq.com/).
 
     .col-md-3.corp-logo
-      %img{src: "images/logos/fmi.png"}
+      img src="images/logos/fmi.png" 
 
-%h3 Education
+h3 Education
 
 .panel.panel-mit#mit-job
   .panel-heading
@@ -102,8 +101,8 @@
   .panel-body.row
     .col-md-9
       = date_range("MIT", "August 2000", "June 2004")
-      :markdown
+      markdown:
         I studied [Electrical Engineering and Computer Science (6-2)](http://www.eecs.mit.edu/academics-admissions/undergraduate-programs/course-6-2-electrical-eng-computer-science), focusing on digital hardware.
 
     .col-md-3.corp-logo
-      %img{src: "images/logos/mit.png"}
+      img src="images/logos/mit.png" 

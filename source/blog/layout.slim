@@ -1,0 +1,17 @@
+= wrap_layout :layout do
+  #blog
+    #blog-info
+      #blog-info-content
+        h4 Isaac Cambron
+        p
+         a href="http://twitter.com/icambron" @icambron
+        p
+          i.fa.fa-caret-left
+          a href="/blog" Back to blog
+    #blog-articles
+      .blog-article
+        .blog-content
+          h2= "#{link_to current_article.title, current_article}"
+          p.blog-date= current_article.date.strftime('%b %e, %Y')
+          = current_article.body
+
