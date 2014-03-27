@@ -64,7 +64,7 @@ Anyway, here I was trying to make a nice interactive resume for a simple "Hi, I'
  * [MIT Simile's timeline](http://simile-widgets.org/timeline/)
  * [Timeline.js](http://timeline.verite.co/)
 
-After trying out Timeline (it is pretty), I decided it was too big and heavyweight-- it's a timeline, not an application framework. It doesn't need themes or its own script loader. Importantly, it also didn't really do what I wanted, partially because it imposes some constraints I don't like, and partially because it just isn't meant for my use case. Simile is similar, but unmaintained and worse looking. I wanted something really simple:
+After trying out Timeline (it is pretty), I decided it was too big and heavyweight--- it's a timeline, not an application framework. It doesn't need themes or its own script loader. Importantly, it also didn't really do what I wanted, partially because it imposes some constraints I don't like, and partially because it just isn't meant for my use case. Simile is similar, but unmaintained and worse looking. I wanted something really simple:
 
  1. It should turn some list items into timeline bars. No-JS fallback FTW.
  2. It should create an interval key (the times at the bottom).

@@ -5,13 +5,13 @@ tags: programming
 
 [Ben Bitdiddle and Alyssa P. Hacker](http://en.wikipedia.org/wiki/Structure_and_Interpretation_of_Computer_Programs#Characters) are at a bar, at least three martinis deep. You're at nearby table and overhear their loud conversation:
 
-> **BB**: I don't want that job, because I'm a Java programmer and they're a Python shop, and--
+> **BB**: I don't want that job, because I'm a Java programmer and they're a Python shop, and---
 
 > **APH**: What do you mean, you're a "Java programmer"?
 
-> **BB**: Well, you know, some people are Perl programmers, and other people are Java programmers, and other--
+> **BB**: Well, you know, some people are Perl programmers, and other people are Java programmers, and other---
 
-> **APH**: No. Of all the stupid ways you can sort programmers into buckets--back-end vs front-end, application vs operating system, enterprise vs consumer--why would you choose to define yourself by the programming language you typically use?
+> **APH**: No. Of all the stupid ways you can sort programmers into buckets---back-end vs front-end, application vs operating system, enterprise vs consumer---why would you choose to define yourself by the programming language you typically use?
 
 > **BB**: Well, I know Java. I don't know Python. It says "Java programmer" next to my name on my resume.
 
@@ -29,6 +29,6 @@ In any language, I find myself mixing and matching programming paradigms borrowe
 
 Of course, it goes deeper than language features: languages are more than just syntax trees. A lot more. In practice, languages are tightly coupled with standard libraries, platforms, and ecosystems. These are usually impedance-matched with the language itself; have you ever noticed that Java libraries tend to be verbose and explicit while Ruby libraries tend to be terse and slick? That extends to how the API interfaces are structured, the extension points, the level of programatic openness, everything. When you choose a language, you're also choosing a programming philosophy, because everything built for you is built with that philosophy.
 
-You might have decided you strongly prefer programming under a certain philosophy. Let's say--and we're being incredibly simplistic about the salient features of languages--you really like dynamic, hack-friendly languages with lots of syntactic shortcuts, because you're a dynamic, hacky, slick kind of dude. That's fine, I'm with you. But what happens when you come across a problem that's best solved with a statically typed language with lots of imposed structure? Do you abandon the whole problem, or do you pigeon hole it into your programming aesthetic? You should instead learn some alternative techniques indigenous to other languages, or even just solve the problem in one of those languages. Do you really think your language is so perfect that it contains every concept you might need?
+You might have decided you strongly prefer programming under a certain philosophy. Let's say---and we're being incredibly simplistic about the salient features of languages---you really like dynamic, hack-friendly languages with lots of syntactic shortcuts, because you're a dynamic, hacky, slick kind of dude. That's fine, I'm with you. But what happens when you come across a problem that's best solved with a statically typed language with lots of imposed structure? Do you abandon the whole problem, or do you pigeon hole it into your programming aesthetic? You should instead learn some alternative techniques indigenous to other languages, or even just solve the problem in one of those languages. Do you really think your language is so perfect that it contains every concept you might need?
 
 There are some good reasons you might build something in Java (or any other language). But there are also an awful lot of bad ones, the greatest of which is that you just happen to know Java. So yeah, BB should maybe look more closely at that Python gig. And APH should think a bit harder about programming languages, and why they might be important.

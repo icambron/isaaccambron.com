@@ -23,9 +23,9 @@ Sometimes those one-night stands turn into flings, or get drawn out into rebound
 
  * Eclipse/RAD - It knows Java and understood the <s>Byzantine boondoggle</s> [sophisticated project](http://en.wikipedia.org/wiki/IBM_Workplace) I was working on. Otherwise, Eclipse is just a bloated, sluggish mess of menus and modes and clicking and NullPointerExceptions.
 
- * [SlickEdit](http://www.slickedit.com/products/slickedit) - It's great at editing text, is hugely customizable, and has a few [features](http://www.slickedit.com/products/slickedit/cool-features#surroundwith) I still miss. But it's ugly, the UI is awkward, the customizations are in a weird C-like language, and--when I used it--it couldn't parse non-ancient versions of C#. Oh, and it's expensive and you have to pay each year to keep up.
+ * [SlickEdit](http://www.slickedit.com/products/slickedit) - It's great at editing text, is hugely customizable, and has a few [features](http://www.slickedit.com/products/slickedit/cool-features#surroundwith) I still miss. But it's ugly, the UI is awkward, the customizations are in a weird C-like language, and---when I used it---it couldn't parse non-ancient versions of C#. Oh, and it's expensive and you have to pay each year to keep up.
 
- * Visual Studio - Can parse C#, but is completely unhelpful without an [expensive third-party plugin](http://www.jetbrains.com/resharper/) (which is itself very nice). More importantly, VS may be the *worst text editor I've ever used*. Seriously, just awful. And out of contention anyway -- I don't run Windows anymore.
+ * Visual Studio - Can parse C#, but is completely unhelpful without an [expensive third-party plugin](http://www.jetbrains.com/resharper/) (which is itself very nice). More importantly, VS may be the *worst text editor I've ever used*. Seriously, just awful. And out of contention anyway --- I don't run Windows anymore.
 
  * RubyMine - It's packed with nice Ruby features and it runs well on Linux, but it can't escape its Eclipse heritage. Too clunky.
 

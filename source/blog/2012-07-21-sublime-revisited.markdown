@@ -23,7 +23,7 @@ I could get around this by by setting a mark, going where I want to go, using th
 
 Slight aside: I've been using [EmacsKillRing plugin](https://github.com/stiang/EmacsKillRing) that partially fixes at least the cut/paste part of this and adds some other Emacsy goodness, but it doesn't really solve the issue that the region isn't a first-class selection, and it has plenty of other issues too.
 
-Anyway, what I want--I think, anyway--is just a select lock command. Instead of set_mark, I just want to say:
+Anyway, what I want---I think, anyway---is just a select lock command. Instead of set_mark, I just want to say:
 
 > Look, I want my selection to start here. Wherever I go with caret, have the selection follow me, like how it does if I hit shift+up. Then treat my actions like you normally would. Cut cuts, Copy copies, etc.
 
