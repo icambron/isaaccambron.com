@@ -24,7 +24,10 @@ do ($ = jQuery) ->
     loadTwitter: (tweets) ->
       createList.call @, tweets, (item) =>
         [
-          date item
+          $('<div>')
+            .append(date(item).addClass('pull-left'))
+            .append($('<a>').addClass('pull-right').attr('href', item.url).text('Link'))
+          $('<div>').addClass('clearfix')
           $('<p>').html("<span>#{twttr.txt.autoLink item.text}</span>")
         ]
 
