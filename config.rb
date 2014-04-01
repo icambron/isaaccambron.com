@@ -44,8 +44,10 @@ set :css_dir, 'stylesheets'
 set :js_dir, 'javascripts'
 set :images_dir, 'images'
 
-sprockets.append_path "vendor/javascripts"
-sprockets.append_path "vendor/stylesheets"
+ready do
+  sprockets.append_path "vendor/javascripts"
+  sprockets.append_path "vendor/stylesheets"
+end
 
 configure :build do
   activate :minify_css
