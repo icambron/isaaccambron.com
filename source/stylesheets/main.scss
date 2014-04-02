@@ -1,7 +1,6 @@
 $color: black;
 $pass: hsla(1, 100%, 100%, 0);
 
-$header-color: hsla(179, 46%, 44%, 1);
 $projects-color: hsla(254, 41%, 52%, 1);
 $resume-color: hsla(40, 58%, 40%, 1);
 $info-color: hsla(90, 30%, 30%, 1);
@@ -9,8 +8,8 @@ $info-color: hsla(90, 30%, 30%, 1);
 $list-group-bg: $pass;
 
 $text-color: $color;
-$link-color: $color;
-$link-hover-color: opacify($link-color, 0.15);
+$brand-primary: hsl(35,95,40);
+$link-hover-color: opacify($brand-primary, 0.15);
 $close-color: $color;
 
 $mit-color: #993333;
@@ -20,6 +19,11 @@ $ninja-color: black;
 $streamcal-color: #41c1cc;
 $thomson-color: #ec7a19;
 $consulting-color: green;
+
+$navbar-inverse-link-color: lighten($brand-primary, 10%);
+$navbar-inverse-link-hover-color: lighten($navbar-inverse-link-color, 30%);
+$navbar-inverse-default-brand-color: $navbar-inverse-link-color;
+$navbar-inverse-brand-hover-color: $navbar-inverse-link-hover-color;
 
 @import "variables";
 
@@ -54,9 +58,9 @@ a {
   text-decoration: none;
 }
 
-p a {
-  text-decoration: underline;
-}
+//p a {
+//  text-decoration: underline;
+//}
 
 @mixin panel-box($color) {
   @include panel-variant(darken($color, 10%), white, $color, none);

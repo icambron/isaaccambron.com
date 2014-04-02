@@ -24,7 +24,8 @@ per_page: 5
         .blog-content
           h2="#{link_to article.title, article}"
           p.blog-date= article.date.strftime('%b %e, %Y')
-          = article.body
+          .blog-content-body
+            = article.body
           a.pull-right href="http://github.com/icambron/isaaccambron.com/tree/master/source#{article.source_file.gsub(/.*?\/blog/, '/blog')}" Source
           .clearfix
           hr
