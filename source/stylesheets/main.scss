@@ -65,12 +65,14 @@ a {
 @mixin panel-box($color) {
   @include panel-variant(darken($color, 10%), white, $color, none);
 
-  .panel-body, .panel-footer {
-    color: black;
-    a {
-      color: black;
+  .panel-body {
+    a, a:hover {
+      color: $color;
     }
-    a:hover {
+  }
+
+  .panel-footer {
+    a, a:hover {
       color: black;
     }
   }
