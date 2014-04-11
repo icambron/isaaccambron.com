@@ -7,6 +7,8 @@ activate :blog do |blog|
   @tab = "blog"
 end
 
+activate :sprockets
+
 page '/demos/*', layout: false
 page "/blog/feed.xml", layout: false
 

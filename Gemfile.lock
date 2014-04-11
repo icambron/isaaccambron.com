@@ -123,6 +123,7 @@ DEPENDENCIES
   middleman-blog
   middleman-livereload
   middleman-slim
+  middleman-sprockets
   middleman-syntax
   redcarpet
   slim
