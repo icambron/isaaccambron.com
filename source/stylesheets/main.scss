@@ -41,12 +41,28 @@ p.date {
   color: transparentize($color, 0.15);
 }
 
+img#headshot {
+  @extend .img-circle;
+}
+
 h1 {
   text-transform: none;
 }
 
-h3.main-links {
+h2.main-links {
+
   line-height: $headings-line-height * 1.25;
+  font-size: $font-size-h2 * 1.1;
+
+  @media (min-width: $screen-md-min) {
+    text-align: right;
+  }
+}
+
+.lil-links {
+  @media (min-width: $screen-md-min) {
+    float: right;
+  }
 }
 
 .row {
