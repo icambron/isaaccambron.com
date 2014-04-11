@@ -1,5 +1,7 @@
 #!/bin/bash
 
+git push origin master
+
 middleman build
 cd build
 git add .
