@@ -145,8 +145,22 @@ a {
   display: none;
 }
 
+#feeds {
+  display: none;
+}
+
+.demo-button {
+  display: none;
+}
+
 .js-enabled {
   #timeline-section {
+    display: block;
+  }
+  #feeds {
+    display: block;
+  }
+  .demo-button {
     display: block;
   }
 }

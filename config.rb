@@ -7,8 +7,6 @@ activate :blog do |blog|
   @tab = "blog"
 end
 
-activate :sprockets
-
 page '/demos/*', layout: false
 page "/blog/feed.xml", layout: false
 
@@ -46,13 +44,14 @@ set :css_dir, 'stylesheets'
 set :js_dir, 'javascripts'
 set :images_dir, 'images'
 
-ready do
-  sprockets.append_path "vendor/javascripts"
-  sprockets.append_path "vendor/stylesheets"
-end
-
 configure :build do
   activate :minify_css
   activate :minify_javascript
   set :js_compressor, Uglifier.new(compress: {loops: false})
 end
+
+ready do
+  sprockets.append_path "vendor/javascripts"
+  sprockets.append_path "vendor/stylesheets"
+end
+
