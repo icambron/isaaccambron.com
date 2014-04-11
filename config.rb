@@ -53,5 +53,6 @@ end
 
 configure :build do
   activate :minify_css
+  activate :minify_javascript
   set :js_compressor, Uglifier.new(compress: {loops: false})
 end
