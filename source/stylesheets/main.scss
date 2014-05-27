@@ -37,6 +37,14 @@ body {
   background-color: white;
 }
 
+.navbar-toggle {
+  color: $navbar-inverse-link-color;
+
+  :hover {
+    color: $navbar-inverse-link-hover-color;
+  }
+}
+
 p.date {
   color: transparentize($color, 0.15);
 }
@@ -49,8 +57,8 @@ h1 {
   text-transform: none;
 }
 
-h2.main-links {
 
+h2.main-links {
   line-height: $headings-line-height * 1.25;
   font-size: $font-size-h2 * 1.1;
 

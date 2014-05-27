@@ -54,4 +54,3 @@ ready do
   sprockets.append_path "vendor/javascripts"
   sprockets.append_path "vendor/stylesheets"
 end
-
