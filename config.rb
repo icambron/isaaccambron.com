@@ -7,6 +7,11 @@ activate :blog do |blog|
   @tab = "blog"
 end
 
+activate :google_analytics do |ga|
+  ga.tracking_id = 'UA-52148016-1'
+  ga.minify = true
+end
+
 page '/demos/*', layout: false
 page "/blog/feed.xml", layout: false
 

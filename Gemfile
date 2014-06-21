@@ -10,6 +10,7 @@ gem 'middleman-blog'
 gem 'middleman-syntax'
 gem 'middleman-slim'
 gem 'middleman-sprockets'
+gem 'middleman-google-analytics'
 
 gem 'redcarpet'
 
