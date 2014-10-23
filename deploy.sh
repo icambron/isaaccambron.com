@@ -2,7 +2,7 @@
 
 git push origin master
 
-middleman build
+bundle exec middleman build
 cd build
 git add .
 git commit -am "build"
