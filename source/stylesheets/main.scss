@@ -19,6 +19,7 @@ $ninja-color: black;
 $streamcal-color: #41c1cc;
 $thomson-color: #ec7a19;
 $consulting-color: green;
+$zensight-color: #4f81bd;
 
 $navbar-inverse-link-color: lighten($brand-primary, 25%);
 $navbar-inverse-link-hover-color: lighten($navbar-inverse-link-color, 15%);
@@ -165,6 +166,10 @@ a {
   @include panel-box($consulting-color);
 }
 
+.panel-zensight {
+  @include panel-box($zensight-color);
+}
+
 #timeline-section {
   display: none;
 }
@@ -218,6 +223,10 @@ ul.timestack-events {
 
   li.timeline-consulting {
     background-color: $consulting-color;
+  }
+
+  li.timeline-zensight {
+    background-color: $zensight-color;
   }
 }
 
