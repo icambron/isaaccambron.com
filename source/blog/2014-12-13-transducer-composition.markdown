@@ -21,7 +21,7 @@ It turns out I'd missed that docs mention that explicitly:
 
 > The composed xf transducer will be invoked left-to-right...
 
-It took me a bit to figure out what was happening at all, and when it dawned on me ("oh, it goes the other way!"), I wondered *why the hell does it do that?* I asked about it on the ClojureScript IRC channel, where [David Nolan](https://twitter.com/swannodette) told me to go look at the source. That's a totally fine answer (it's not his job to sit around and write out detailed answers to my questions), but it's of course more useful if there's an explanation written up, hence this post.
+It took me a bit to figure out what was happening at all, and when it dawned on me ("oh, it goes the other way!"), I wondered *why the hell does it do that?* I asked about it on the ClojureScript IRC channel, where [David Nolen](https://twitter.com/swannodette) told me to go look at the source. That's a totally fine answer (it's not his job to sit around and write out detailed answers to my questions), but it's of course more useful if there's an explanation written up, hence this post.
 
 I actually didn't look at the source; instead, I took a nap and when I woke up I was pretty confident I knew the answer.
 
