@@ -45,7 +45,7 @@ If you want to apply that composition to each element of a sequence, you'd do so
 
 But perhaps you have a bunch of functions that operate on sequences, and you want to compose *those*, you end up with the uglier, less efficient, and no less correct composition of maps:
 
-```
+```clojure
 ((comp #(map doubler %) #(map inc %)) [1 2 3]) ;=> (4 6 8)
 ```
 
