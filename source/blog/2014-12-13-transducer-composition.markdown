@@ -81,7 +81,7 @@ I'll make that more concrete in a moment, but first, note that this inside-outne
 (map ((comp pre-doubler pre-inc) identity) [1 2 3]) ;=> (3 5 7), all backwardslike
 ```
 
-If that makes sense to you, the next part will be easy. One interesting way to make sense of this is to implement a simplified version of transducers. We'll skip a bunch of complications, like stateful transducers, and we won't bother to make the actual reduction polymorphic or add some of the conveniences. But here goes:
+If that makes sense to you, the next part will be easy. One interesting way to better understand all this is to implement a simplified version of transducers. We'll skip a bunch of complications, like stateful transducers, and we won't bother to make the actual reduction polymorphic or add some of the conveniences. But here goes:
 
 ```clojure
 (defn my-transduce [xform f init coll]
