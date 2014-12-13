@@ -43,7 +43,7 @@ If you want to apply that composition to each element of a sequence, you'd do so
 (map (comp doubler inc) [1 2 3]) ;=> (4 6 8)
 ```
 
-But perhaps you have a bunch of functions that operate on sequences, and you want to compose *those*, you end up with the uglier, less efficient, and no less correct composition of maps:
+But perhaps you have a bunch of functions that operate on sequences, and you want to compose *those*. You end up with the uglier, less efficient, and no less correct composition of maps:
 
 ```clojure
 ((comp #(map doubler %) #(map inc %)) [1 2 3]) ;=> (4 6 8)
@@ -60,7 +60,7 @@ You create a transducer by calling one of the standard listy functions without a
 (transduce (map inc) + [1 2 3]) ;=> 9
 ```
 
-What's really neat is that different containery things can implement `reduce` differently without having to define its own specific transformations (or even make you do it differently for your different use cases). For example, you could use some transducers you built to transform a vector, while your async.core channels can use *the same transducers* to transform values pushed through them.
+What's really neat is that different containery things can implement `reduce` differently without having to define its own specific transformations (or even make you do it differently for your different use cases). For example, you could use some transducers you built to transform a vector, while your async.core channels can use *the same transducers* to transform values pushed through them. That works because those async channels can provide their own definition of reduce, and the transducers only depend on that having the right shape.
 
 OK, so that's a terse introduction, but for more, go watch [the StrangeLoop talk](https://www.youtube.com/watch?v=6mTbuzafcII).
 
