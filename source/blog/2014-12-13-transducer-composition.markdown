@@ -17,7 +17,7 @@ Just playing around with it, I got confused for a bit that my transducers kept c
 ((comp #(map doubler %) #(map inc %)) [1 2 3]) ;=> (4 6 8)
 ```
 
-It turns out I'd missed that docs mention that explicitly:
+It turns out I'd missed that the docs mention that explicitly:
 
 > The composed xf transducer will be invoked left-to-right...
 
@@ -94,7 +94,7 @@ If that makes sense to you, the next part will be easy. One interesting way to m
 
 (defn my-map [f]
   (fn [rf] ;rf is like conj or +
-    (fn [result input]
+    (fn [result input] ;can be passed to a reducing function
       (rf result (f input))))) ;this is the inversion that answers the question
 
 (my-into [] (comp (my-map doubler) (my-map inc)) [1 2 3]) ;=> [3,5,7]
