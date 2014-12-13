@@ -14,4 +14,4 @@
           h2= "#{link_to current_article.title, current_article}"
           p.blog-date= current_article.date.strftime('%b %e, %Y')
           = current_article.body
-
+          a.pull-right href="http://github.com/icambron/isaaccambron.com/tree/master/source#{current_article.source_file.gsub(/.*?\/blog/, '/blog')}" Source
