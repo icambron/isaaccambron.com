@@ -74,7 +74,7 @@ I'll make that more concrete in a moment, but first, note that this inside-outne
 
 ```clojure
 (defn pre-inc [f] #(f (inc %)))
-(defn pre-doubler [f] #(f (double %)))
+(defn pre-doubler [f] #(f (doubler %)))
 
 (((comp pre-doubler pre-inc) identity) 2) ;=> 5
 
