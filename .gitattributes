@@ -1,1 +1,2 @@
-source/vendor/* linguist-vendored
+source/vendor/javascripts/* linguist-vendored
+source/vendor/stylesheets/* linguist-vendored
