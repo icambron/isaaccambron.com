@@ -60,7 +60,7 @@ You create a transducer by calling one of the standard listy functions without a
 (transduce (map inc) + [1 2 3]) ;=> 9
 ```
 
-What's really neat is that different containery things can implement `reduce` differently without having to define its own specific transformations (or even make you do it differently for your different use cases). For example, you could use some transducers you built to transform a vector, while your async.core channels can use *the same transducers* to transform values pushed through them. That works because those async channels can provide their own definition of reduce, and the transducers only depend on that having the right shape.
+What's really neat is that different containery things can implement `reduce` differently without having to define its own specific transformations (or even make you do it differently for your different use cases). For example, you could use some transducers you built to transform a vector, while your core.async channels can use *the same transducers* to transform values pushed through them. That works because those async channels can provide their own definition of reduce, and the transducers only depend on that having the right shape.
 
 OK, so that's a terse introduction, but for more, go watch [the StrangeLoop talk](https://www.youtube.com/watch?v=6mTbuzafcII).
 
@@ -81,7 +81,7 @@ I'll make that more concrete in a moment, but first, note that this inside-outne
 (map ((comp pre-doubler pre-inc) identity) [1 2 3]) ;=> (3 5 7), all backwardslike
 ```
 
-If that makes sense to you, the next part will be easy. One interesting way to better understand all this is to implement a simplified version of transducers. We'll skip a bunch of complications, like stateful transducers, and we won't bother to make the actual reduction polymorphic or add some of the conveniences. But here goes:
+If that makes sense to you, the next part will be easy. One interesting way to better understand all this is to implement a simplified version of transducers. We'll skip a bunch of complications, like stateful transducers, and we won't bother with a really important thing about transducers: making the actual reduction polymorphic. But here goes:
 
 ```clojure
 (defn my-transduce [xform f init coll]
