@@ -13,7 +13,7 @@ We also have that violence is part of the extremism bundle:
 
 >  The questionable character of extremism is anyway right there on the surface of our ordinary understanding of the term. There is a whiff of violence, or at least danger, about extremism. Extremists reject mainstream opinion, including mainstream opinion about acceptable political tactics. To embrace extremism in defense of something is to at least flirt with the idea that violence isn’t out of the question.
 
-I will give Wilkinson that no one's moral philosophy holds violence to be a virtue in itself, so I'm on board with this labeling. And if he wants to define virtue in such a way that it precludes extremism, who am I to argue, except to point out that sometimes maybe we shouldn't be virtuous? But the problem is that Wilkinson doesn't really believe that extremism=non-virtue is tautological for any useful sense of virtue:
+I will give Wilkinson that no one's moral system holds violence to be a virtue in itself, so I'm on board with this labeling. And if he wants to define virtue in such a way that it precludes extremism, who am I to argue, except to point out that sometimes maybe we shouldn't be virtuous? But the problem is that Wilkinson doesn't really believe that extremism=non-virtue is tautological for any useful sense of virtue:
 
 > Throughout its history, America’s white supremacist institutions have been so violently opposed to the liberty of black people that it was not unreasonable to believe that something extreme might need to be done to finally win them a modicum of freedom.
 
