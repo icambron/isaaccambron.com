@@ -3,7 +3,7 @@ title: Will Wilkinson on Extremism and Libertarianism
 tags: politics
 ---
 
-Will Wilkinson has a [piece](https://novirtue.org/on-the-saying-that-extremism-in-defense-of-liberty-is-no-vice/) on Barry Goldwater's line "Extremism in defense of liberty is no vice". I guess the idea is to use his criticism of that line as a sort launching point for a larger discussion about libertarianism. I don't have any particularly strong opinions about libertarianism as a whole I have no special affinity for that quote, but I think the piece ends up being pretty empty.
+Will Wilkinson has a [piece](https://novirtue.org/on-the-saying-that-extremism-in-defense-of-liberty-is-no-vice/) on Barry Goldwater's line "Extremism in defense of liberty is no vice". I guess the idea is to use his criticism of that line as a sort launching point for a larger discussion about libertarianism. I don't have any particularly strong opinions about libertarianism as a whole and I have no special affinity for that quote, but I think the piece ends up being pretty empty.
 
 Here's what seems like the core of the argument:
 
