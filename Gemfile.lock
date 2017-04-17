@@ -33,6 +33,8 @@ GEM
     fast_blank (1.0.0)
     fastimage (2.1.0)
     ffi (1.9.18)
+    font-awesome-sass (4.7.0)
+      sass (>= 3.2)
     haml (4.0.7)
       tilt
     hamster (3.0.0)
@@ -91,9 +93,6 @@ GEM
       em-websocket (~> 0.5.1)
       middleman-core (>= 3.3)
       rack-livereload (~> 0.3.15)
-    middleman-slim (0.2.2)
-      middleman (>= 3.2)
-      slim (>= 2.0)
     middleman-sprockets (4.1.0)
       middleman-core (~> 4.0)
       sprockets (>= 3.0)
@@ -140,11 +139,11 @@ PLATFORMS
 DEPENDENCIES
   bootstrap-sass
   builder
+  font-awesome-sass
   middleman
   middleman-blog
   middleman-google-analytics
   middleman-livereload
-  middleman-slim
   middleman-sprockets
   middleman-syntax
   redcarpet

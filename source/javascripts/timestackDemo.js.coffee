@@ -1,9 +1,9 @@
 # vi: ft=coffee
 
-#= require jquery.min
-#= require moment.min
-#= require timestack
-#= require knockout
+#= require vendor/jquery.min
+#= require vendor/moment.min
+#= require vendor/timestack
+#= require vendor/knockout
 
 class ViewModel
   constructor: ->
@@ -33,9 +33,7 @@ class Period
     m = moment()
     [start, end] = switch span
       when 'year'
-        a  = [[m.year() - 1, 7], [m.year() + 1, 2]]
-        console.log a
-        a
+        [[m.year() - 1, 7], [m.year() + 1, 2]]
       when 'month'
         [[m.year(), 2, 3], [m.year(), 6, 14]]
       when 'day'

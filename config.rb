@@ -4,28 +4,15 @@ activate :blog do |blog|
   blog.prefix = "blog"
   blog.layout = "blog"
   blog.paginate = true
-  @tab = "blog"
 end
 
 activate :google_analytics do |ga|
-  ga.tracking_id = 'UA-52148016-1'
+  ga.tracking_id = "UA-52148016-1"
   ga.minify = true
 end
 
-page '/demos/*', layout: false
+page "/demos/*", layout: false
 page "/blog/feed.xml", layout: false
-
-page "/" do
-  @tab = "about"
-end
-
-page "/resume*" do
-  @tab = "resume"
-end
-
-page "/projects*" do
-  @tab = "projects"
-end
 
 helpers do
   def date_range(name, starts, ends, display= name)
@@ -55,7 +42,4 @@ configure :build do
   set :js_compressor, Uglifier.new(compress: {loops: false})
 end
 
-ready do
-  sprockets.append_path "vendor/javascripts"
-  sprockets.append_path "vendor/stylesheets"
-end
+activate :sprockets

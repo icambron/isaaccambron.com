@@ -3,10 +3,12 @@
 $link-color: $twix-color;
 $link-color-hover: lighten($twix-color, 10%);
 
+@import "bootstrap-sprockets";
 @import "bootstrap";
+@import "font-awesome-sprockets";
 @import "font-awesome";
 
-@import "jquery.simple-dtpicker";
+//= require vendor/bootstrap-datetimepicker-standalone
 
 .container :first-child {
   margin-top: 0px;

@@ -1,8 +1,8 @@
-#= require jquery.min
-#= require moment.min
-#= require twitter-text
-#= require timestack
-#= require bootstrap
+#= require vendor/jquery.min.js
+#= require vendor/moment.min.js
+#= require vendor/twitter-text.js
+#= require vendor/timestack.js
+#= require bootstrap.js
 
 #= require loadExternal
 #= require showDemo

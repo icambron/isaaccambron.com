@@ -7,6 +7,7 @@ html
 
     title= current_page.data.title || "Isaac Cambron"
     = stylesheet_link_tag  "main"
+
     = javascript_include_tag  "main"
   body
     .navbar.navbar-inverse
@@ -17,13 +18,13 @@ html
         a.navbar-brand href= "/" Isaac
       .collapse.navbar-collapse
         ul.nav.navbar-nav
-          li class="#{@tab == 'about' ? 'active' : ''}" 
+          li
             a href='/' About
-          li  class="#{@tab == 'projects' ? 'active' : ''}"
+          li
             a href='/projects.html' OSS Projects
-          li class="#{@tab == 'resume' ? 'active' : ''}"
+          li
             a href='/resume.html' Resume
-          li class="#{@tab == 'blog' ? 'active' : ''}"
+          li
             a href='/blog' Blog
     .container
       = yield

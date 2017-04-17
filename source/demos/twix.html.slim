@@ -13,12 +13,14 @@ html
       h3 Configure demo
       p Pick start and end times and see the results of various Twix functions.
       .row
-        .col-lg-4
-          label Start
-          div data-bind="dtPicker: range.start"
-        .col-lg-4
-          label End
-          div data-bind="dtPicker: range.end"
+        .col-md-6
+          .form-group
+            label Start
+            input.form-control type="text" data-bind="dateTimePicker: range.start"
+        .col-md-6
+          .form-group
+            label End
+            input.form-control type="text" data-bind="dateTimePicker: range.end"
 
       .checkbox
         label

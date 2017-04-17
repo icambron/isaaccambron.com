@@ -29,10 +29,11 @@ $navbar-inverse-brand-hover-color: $navbar-inverse-link-hover-color;
 @import "variables";
 
 @import "bootstrap";
+@import "font-awesome-sprockets";
 @import "font-awesome";
-@import "timestack";
 
-@import "syntax";
+@import "vendor/timestack.css";
+@import "syntax.css";
 
 body {
   background-color: white;
@@ -282,10 +283,6 @@ ul.timestack-events {
 iframe.demo-frame {
   position: relative;
   height: 100%;
-}
-
-.moment-demo-header {
-  background-color: $moment-color;
 }
 
 .twix-demo-header {

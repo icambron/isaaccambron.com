@@ -1,10 +1,10 @@
 # vi: ft=coffee
 
-#= require jquery.min
-#= require moment.min
-#= require twix
-#= require knockout
-#= require jquery.simple-dtpicker
+#= require vendor/jquery.min
+#= require vendor/moment.min
+#= require vendor/twix
+#= require vendor/knockout
+#= require vendor/bootstrap-datetimepicker.min
 
 class TwixWrap
   constructor: ->
@@ -81,19 +81,20 @@ class ViewModel
             "twix.count('years')"
           ]
         }
-        {
-          name: 'Count inner'
-          description: 'Count the number time periods completely contained by the range'
-          tests: [
-            "twix.countInner('miliseconds')"
-            "twix.countInner('seconds')"
-            "twix.countInner('minutes')"
-            "twix.countInner('hours')"
-            "twix.countInner('days')"
-            "twix.countInner('months')"
-            "twix.countInner('years')"
-          ]
-        }
+        # no idea why this stopped working but don't have time to look now
+        #{
+        #  name: 'Count inner'
+        #  description: 'Count the number time periods completely contained by the range'
+        #  tests: [
+        #    "twix.countInner('miliseconds')"
+        #    "twix.countInner('seconds')"
+        #    "twix.countInner('minutes')"
+        #    "twix.countInner('hours')"
+        #    "twix.countInner('days')"
+        #    "twix.countInner('months')"
+        #    "twix.countInner('years')"
+        #  ]
+        #}
         {
           name: 'Iterate'
           description: 'Provide each time period touched by the range'
@@ -107,19 +108,19 @@ class ViewModel
             "twix.iterate('years').next()"
           ]
         }
-        {
-          name: 'Iterate Inner'
-          description: 'Provide each time period completely contained by the range'
-          tests: [
-            "twix.iterateInner('miliseconds').next()"
-            "twix.iterateInner('seconds').next()"
-            "twix.iterateInner('minutes').next()"
-            "twix.iterateInner('hours').next()"
-            "twix.iterateInner('days').next()"
-            "twix.iterateInner('months').next()"
-            "twix.iterateInner('years').next()"
-          ]
-        }
+        #{
+        #  name: 'Iterate Inner'
+        #  description: 'Provide each time period completely contained by the range'
+        #  tests: [
+        #    "twix.iterateInner('miliseconds').next()"
+        #    "twix.iterateInner('seconds').next()"
+        #    "twix.iterateInner('minutes').next()"
+        #    "twix.iterateInner('hours').next()"
+        #    "twix.iterateInner('days').next()"
+        #    "twix.iterateInner('months').next()"
+        #    "twix.iterateInner('years').next()"
+        #  ]
+        #}
         {
           name: 'Contains'
           description: 'Does the range contain this date?'
@@ -188,12 +189,26 @@ class ViewModel
           code: template, output: eval(template)
         sectionOutput
 
-ko.bindingHandlers.dtPicker =
-  init: (element, valueAccessor) ->
-    obs = valueAccessor()
-    $(element)
-      .bind('dateChange', (e, data) -> obs(data.date))
-      .dtpicker(calendarMouseScroll: false, current: obs().toDate())
+#transliterated from http://eonasdan.github.io/bootstrap-datetimepicker/Installing/#knockout
+ko.bindingHandlers.dateTimePicker = {
+  init: (element, valueAccessor, allBindingsAccessor) ->
+    options = allBindingsAccessor().dateTimePickerOptions || {}
+    $(element).datetimepicker(options)
+
+    ko.utils.registerEventHandler(element, "dp.change", (event) ->
+      value = valueAccessor()
+      value(event.date) if ko.isObservable(value))
+
+    ko.utils.domNodeDisposal.addDisposeCallback(element, ->
+      picker = $(element).data("DateTimePicker")
+      picker.destroy() if picker)
+
+  update: (element, valueAccessor, allBindings, viewModel, bindingContext) ->
+    picker = $(element).data("DateTimePicker")
+    if (picker)
+      koDate = ko.utils.unwrapObservable(valueAccessor())
+      picker.date(koDate)
+}
 
 $ ->
   viewModel = new ViewModel()
