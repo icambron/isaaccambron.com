@@ -43,3 +43,5 @@ configure :build do
 end
 
 activate :sprockets
+
+redirect "/luxon", to: "http://moment.github.io/luxon"
