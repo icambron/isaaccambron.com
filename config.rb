@@ -14,6 +14,8 @@ end
 page "/demos/*", layout: false
 page "/blog/feed.xml", layout: false
 
+redirect "luxon/*", to: "http://moment.github.io/luxon/"
+
 helpers do
   def date_range(name, starts, ends, display= name)
     "<p class='date-range' data-name='#{name}' data-display='#{display}'><span class='date-range-start'>#{starts}</span> - <span class='date-range-end'>#{ends}</span></p>"
@@ -43,5 +45,3 @@ configure :build do
 end
 
 activate :sprockets
-
-redirect "/luxon", to: "http://moment.github.io/luxon"
