@@ -20,6 +20,7 @@ $streamcal-color: #41c1cc;
 $thomson-color: #ec7a19;
 $consulting-color: green;
 $zensight-color: #4f81bd;
+$seismic-color: #f1592a;
 
 $navbar-inverse-link-color: lighten($brand-primary, 25%);
 $navbar-inverse-link-hover-color: lighten($navbar-inverse-link-color, 15%);
@@ -171,6 +172,10 @@ a {
   @include panel-box($zensight-color);
 }
 
+.panel-seismic {
+  @include panel-box($seismic-color);
+}
+
 #timeline-section {
   display: none;
 }
@@ -228,6 +233,10 @@ ul.timestack-events {
 
   li.timeline-zensight {
     background-color: $zensight-color;
+  }
+
+  li.timeline-seismic {
+    background-color: $seismic-color;
   }
 }
 

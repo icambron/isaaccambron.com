@@ -5,7 +5,7 @@ h3 Overview
   .panel-body
     markdown:
 
-      **Experience**: A short story: when I graduated MIT, I went to work for IBM/Lotus. Then I was one of the first hires at Contact Networks, where I built a large part of the product and helped grow the team and business. Thomson Reuters acquired the company in 2007. I've done a lot of consulting. Now I'm Co-founder and CTO of Zensight.
+      **Experience**: A short story: when I graduated MIT, I went to work for IBM/Lotus. Then I was one of the first hires at Contact Networks, where I built a large part of the product and helped grow the team and business. Thomson Reuters acquired the company in 2007. I cofounded an AI startup called Zensight that helped sales reps customize their messaging to enhance sales. In December 2017, we sold the company to Seismic, where I work now. Between all those, I've done a lot of consulting.
 
       **Position**: I've been the only coder on a project, working late into the night fueled by caffeine, and I've been the architect for a team, orchestrating development cycles and drawing pretty system design box diagrams. And a few things in between.
 
@@ -13,7 +13,7 @@ h3 Overview
 
       **Specialties**: A long list of programming languages, platforms, tools, and patterns goes here. I know enough of them to know I can learn the ones I don't.
 
-      **OSS**: I'm a commiter for and frequent contributor to [Moment.js](http://momentjs.com), a popular date/time library for Javascript. I also maintain several of my own OSS libraries (see the [OSS Projects](/projects.html) page), and have made contributions to a slew of other projects. You can see it all [at Github](http://github.com/icambron).
+      **OSS**: I'm the author of the popular JS date/time library [Luxon](https://moment.github.io/luxon/) and a member of its parent project, [Moment.js](http://momentjs.com). I also maintain several other OSS libraries (see the [OSS Projects](/projects.html) page), and have made contributions to a slew of other projects. You can see it all [at Github](http://github.com/icambron).
 
 #timeline-section.hidden-small.hidden-xs
   h3 Timeline
@@ -21,14 +21,27 @@ h3 Overview
 
 h3 Work Experience
 
+.panel.panel-seismic#seismic-job
+  .panel-heading
+    .panel-title Seismic
+  .panel-body.row
+    .col-md-9
+      = date_range("Seismic", "December 2017", "Present")
+      markdown:
+        I'm a principal architect at Seismic, building the next generation sales enablement platform.
+    .col-md-3.corp-logo
+      img src="images/logos/seismic.png" 
+
 .panel.panel-zensight#zensight-job
   .panel-heading
     .panel-title Zensight
   .panel-body.row
     .col-md-9
-      = date_range("Zensight", "February 2014", "Present")
+      = date_range("Zensight", "February 2014", "December 2017")
       markdown:
-        I'm leading a team in building Zensight, a predictive analytics tool that helps sales reps sell more by identifying the content that's most likely to advance their sales objectives. The product uses a combination of machine learning techniques, near-realtime data processing, and a simple, slick UI. It's built with Clojure, ClojureScript, AWS, React, and elbow grease.
+        I lead a team building Zensight, a predictive analytics tool that helps sales reps sell more by identifying the content that's most likely to advance their sales objectives. The product uses a combination of machine learning techniques, near-realtime data processing, and a simple, slick UI. It's built with Clojure, ClojureScript, AWS, React, and elbow grease.
+
+        Zensight was acquired by Seismic in December 2017.
     .col-md-3.corp-logo
       img src="images/logos/zensight.png" 
 
