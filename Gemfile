@@ -5,7 +5,6 @@ gem 'uglifier'
 
 gem 'middleman'
 gem 'middleman-livereload'
-gem 'middleman-blog'
 gem 'middleman-syntax'
 gem 'middleman-sprockets'
 gem 'middleman-google-analytics'

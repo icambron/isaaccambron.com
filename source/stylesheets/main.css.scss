@@ -306,48 +306,6 @@ iframe.demo-frame {
   background-color: $fbfriends-color;
 }
 
-#blog {
-  @extend .row;
-
-  #blog-info {
-    @extend .col-lg-2;
-    @extend .visible-lg;
-
-    #blog-info-content {
-
-      margin-top: 100px;
-
-    }
-  }
-
-  #blog-articles {
-    @extend .col-lg-10;
-  }
-
-  .blog-article {
-    @extend .row;
-    margin-bottom: 60px;
-
-    .blog-content {
-      @extend .col-md-9;
-      h3 {
-        @extend .h4;
-      }
-
-      p {
-        margin-bottom: 20px;
-        font-size: 110%;
-        line-height: 150%;
-      }
-
-      img {
-        max-width: 100%;
-      }
-    }
-  }
-
-}
-
 .highlight {
   font-size: 85%;
 }
