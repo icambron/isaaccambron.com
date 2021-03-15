@@ -1,18 +1,11 @@
 activate :livereload
 
-activate :blog do |blog|
-  blog.prefix = "blog"
-  blog.layout = "blog"
-  blog.paginate = true
-end
-
 activate :google_analytics do |ga|
   ga.tracking_id = "UA-52148016-1"
   ga.minify = true
 end
 
 page "/demos/*", layout: false
-page "/blog/feed.xml", layout: false
 
 helpers do
   def date_range(name, starts, ends, display= name)
